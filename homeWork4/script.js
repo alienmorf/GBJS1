@@ -8,24 +8,24 @@
 // я специально не досматриваю уроки до выполнения задания, чтобы не слышать рекомендации по выполнению
 // поэтому могут быть расхождения в понимании задания...
 
-// let number = prompt('введите число от 0 до 999');
-// function numToObj(num) {
-//     if (num < 0 || num > 999) {
-//         console.log('заданное число вне диапазона 0-999');
-//         const obj = {}
-//         console.log(obj);
-//     } else {
-//         strNum = String(num);
-//         let arrNum = strNum.split('');
-//         const obj = {
-//             'единицы': arrNum[arrNum.length - 1],
-//             'десятки': arrNum[arrNum.length - 2],
-//             'сотни': arrNum[arrNum.length - 3],
-//         }
-//         console.log(obj);
-//     }
-// }
-// numToObj(number);
+let number = prompt('введите число от 0 до 999');
+function numToObj(num) {
+    if (num < 0 || num > 999) {
+        console.log('заданное число вне диапазона 0-999');
+        const obj = {}
+        console.log(obj);
+    } else {
+        strNum = String(num);
+        let arrNum = strNum.split('');
+        const obj = {
+            'единицы': arrNum[arrNum.length - 1],
+            'десятки': arrNum[arrNum.length - 2],
+            'сотни': arrNum[arrNum.length - 3],
+        }
+        console.log(obj);
+    }
+}
+numToObj(number);
 // в случае однозначных и двузначных некоторые свойства станут undefined, для дальнейшего использования такой функции
 // препятствия нет (как я считаю), но если нужен только чистый вывод, то можно сделать либо через else if для каждого случая
 // либо при выводе сообщать что десятки или сотни равны нулю/отсутствуют 
